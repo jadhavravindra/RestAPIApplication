@@ -1,0 +1,233 @@
+{
+	"id": "8611331e-443b-ff1c-5f80-4b5fa2d4e64b",
+	"name": "Localhost:8080",
+	"description": "",
+	"order": [
+		"2a0e1a68-1292-f8a2-6e10-40888d30e146",
+		"ea56f85b-e490-5ce4-bd4d-ef5ff3b14f2a"
+	],
+	"folders": [
+		{
+			"name": "first",
+			"description": "",
+			"collectionId": "8611331e-443b-ff1c-5f80-4b5fa2d4e64b",
+			"order": [
+				"afe109df-50a2-031c-ca9a-765042077637",
+				"f9cfe99a-64ff-c84e-6fe7-870c38ffb128",
+				"cf4d3f60-fdb2-583c-1bbd-f0253a7cceb3",
+				"512cc107-2452-2596-e379-1f157d9eea72",
+				"69ad3f5a-26b2-27a8-54ef-914300276f44"
+			],
+			"owner": "3797613",
+			"folders_order": [],
+			"id": "2d8df513-af17-3f6f-b307-7a55ee857181"
+		}
+	],
+	"folders_order": [
+		"2d8df513-af17-3f6f-b307-7a55ee857181"
+	],
+	"timestamp": 1587394437844,
+	"owner": "3797613",
+	"public": false,
+	"requests": [
+		{
+			"id": "2a0e1a68-1292-f8a2-6e10-40888d30e146",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{test}}/student",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status code is 201\"] = responseCode.code === 201;\n\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1588824449028,
+			"name": "create student",
+			"description": "",
+			"collectionId": "8611331e-443b-ff1c-5f80-4b5fa2d4e64b",
+			"responses": [],
+			"rawModeData": "\r\n    {\r\n              \"firstName\": \"{{FN}}\",\r\n        \"lastName\": \"{{LN}}\",\r\n        \"email\": \"{{Email}}\",\r\n        \"programme\": \"{{prog}}\",\r\n        \"courses\": [\r\n            \"{{courses}}\",\r\n            \"Webdriver testNG\"\r\n        ]\r\n    }\r\n\r\n"
+		},
+		{
+			"id": "512cc107-2452-2596-e379-1f157d9eea72",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{test}}/student/103",
+			"folder": "2d8df513-af17-3f6f-b307-7a55ee857181",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "HEAD",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": "\n\ntests[\"Response time is less than 200ms\"] = responseTime < 200;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1587660537039,
+			"name": "HTTP header information.",
+			"description": "",
+			"collectionId": "8611331e-443b-ff1c-5f80-4b5fa2d4e64b",
+			"responses": [],
+			"isFromCollection": true,
+			"collectionRequestId": "512cc107-2452-2596-e379-1f157d9eea72"
+		},
+		{
+			"id": "69ad3f5a-26b2-27a8-54ef-914300276f44",
+			"headers": "",
+			"headerData": [],
+			"url": "{{test}}/student/103",
+			"folder": "2d8df513-af17-3f6f-b307-7a55ee857181",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"Status code is 204\"] = responseCode.code === 204;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1587660535203,
+			"name": "delete record",
+			"description": "",
+			"collectionId": "8611331e-443b-ff1c-5f80-4b5fa2d4e64b",
+			"responses": [],
+			"isFromCollection": true,
+			"collectionRequestId": "69ad3f5a-26b2-27a8-54ef-914300276f44",
+			"rawModeData": ""
+		},
+		{
+			"id": "afe109df-50a2-031c-ca9a-765042077637",
+			"headers": "",
+			"headerData": [],
+			"url": "{{test}}/student/list",
+			"folder": "2d8df513-af17-3f6f-b307-7a55ee857181",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1588824452611,
+			"name": "student list",
+			"description": "",
+			"collectionId": "8611331e-443b-ff1c-5f80-4b5fa2d4e64b",
+			"responses": []
+		},
+		{
+			"id": "cf4d3f60-fdb2-583c-1bbd-f0253a7cceb3",
+			"headers": "",
+			"headerData": [],
+			"url": "{{test}}/student/103",
+			"folder": "2d8df513-af17-3f6f-b307-7a55ee857181",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "OPTIONS",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Response time is less than 200ms\"] = responseTime < 200;\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1587660538985,
+			"name": "showing allowing method",
+			"description": "",
+			"collectionId": "8611331e-443b-ff1c-5f80-4b5fa2d4e64b",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "ea56f85b-e490-5ce4-bd4d-ef5ff3b14f2a",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{test}}/student/103",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1587660543809,
+			"name": "update the existing record",
+			"description": "",
+			"collectionId": "8611331e-443b-ff1c-5f80-4b5fa2d4e64b",
+			"responses": [],
+			"isFromCollection": true,
+			"collectionRequestId": "ea56f85b-e490-5ce4-bd4d-ef5ff3b14f2a",
+			"rawModeData": "\n    {\n        \"firstName\": \"Ravvvi\",\n        \"lastName\": \"Jadhhhav\",\n        \"email\": \"RHJiiiadhav@gmail.com\",\n        \"programme\": \"QAt\",\n        \"courses\": [\n            \"Instrumentationll engineering\",\n            \"Selenium trallining\"\n        ]\n    }"
+		},
+		{
+			"id": "f9cfe99a-64ff-c84e-6fe7-870c38ffb128",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{test}}/student/103",
+			"folder": "2d8df513-af17-3f6f-b307-7a55ee857181",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PATCH",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1587660541367,
+			"name": "update specific details of the customer",
+			"description": "",
+			"collectionId": "8611331e-443b-ff1c-5f80-4b5fa2d4e64b",
+			"responses": [],
+			"isFromCollection": true,
+			"collectionRequestId": "f9cfe99a-64ff-c84e-6fe7-870c38ffb128",
+			"rawModeData": "\n    {\n          \n        \"email\": \"rjrocking444@gmail.com\",\n        \n        \"courses\": [\n            \"Program  patch request\",\n            \"Selenium training\"\n        ]\n    }"
+		}
+	]
+}

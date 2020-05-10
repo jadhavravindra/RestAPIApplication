@@ -1,0 +1,221 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Localhost:8080",
+		"_postman_id": "8611331e-443b-ff1c-5f80-4b5fa2d4e64b",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "first",
+			"description": "",
+			"item": [
+				{
+					"name": "student list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{test}}/student/list",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "update specific details of the customer",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{test}}/student/103",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n    {\n          \n        \"email\": \"rjrocking444@gmail.com\",\n        \n        \"courses\": [\n            \"Program  patch request\",\n            \"Selenium training\"\n        ]\n    }"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "showing allowing method",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{test}}/student/103",
+						"method": "OPTIONS",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "HTTP header information.",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"",
+									"",
+									"tests[\"Response time is less than 200ms\"] = responseTime < 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{test}}/student/103",
+						"method": "HEAD",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "delete record",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 204\"] = responseCode.code === 204;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{test}}/student/103",
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "second",
+			"description": "",
+			"item": [
+				{
+					"name": "create student",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 201\"] = responseCode.code === 201;",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{test}}/student",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n    {\r\n        \"firstName\": \"{{FN}}\",\r\n        \"lastName\": \"{{LN}}\",\r\n        \"email\": \"{{Email}}\",\r\n        \"programme\": \"{{prog}}\",\r\n        \"courses\": [\r\n            \"{{courses}}\",\r\n            \"Webdriver testNG\"\r\n        ]\r\n    }\r\n\r\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "update the existing record",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{test}}/student/103",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n    {\n        \"firstName\": \"Ravvvi\",\n        \"lastName\": \"Jadhhhav\",\n        \"email\": \"RHJiiiadhav@gmail.com\",\n        \"programme\": \"QAt\",\n        \"courses\": [\n            \"Instrumentationll engineering\",\n            \"Selenium trallining\"\n        ]\n    }"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
